@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
+    .uk-navbar-left
+      ul.uk-navbar-nav
+        li.uk-active
+          a(href='#', uk-icon='user')#dominantColor
+            b Jonathan  
+    .uk-navbar-right
+      ul.uk-navbar-nav
+        li
+          a(href='https://github.com/jherr029', uk-icon='github')
+        li
+          a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')
+
+  .uk-navbar-container(uk-navbar='').uk-box-shadow-large
+    .uk-navbar-center
+      ul.uk-navbar-nav
+        li.uk-parent
+          a(href='') Resume
+        li.uk-parent
+          a(href='') Projects
+        li.uk-parent
+          a(href='') About Me
+    
+  .uk-padding-small
+  .uk-inline
+    img(src='images/tosh.jpg', alt='')
+    .uk-position-cover
+    .uk-overlay.uk-position-bottom.uk-overlay-primary
+      p Testing
+  
+  .container
+    block content
+
+  .uk-padding-small
+  footer.uk-text-center
+    .uk-panel
+      small Developed by Jonathan Herrera
+    .uk-panel
+      small Powered by Ui Kit
+
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js')
