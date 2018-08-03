@@ -6,10 +6,13 @@ html
     link(href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    //- .stars
-    //-   - for (var i = 0; i < 100; i++)
-    //-     .container
-    //-       .star
+    .waveWrapper.waveAnimation
+      .waveWrapperInner.bgTop
+        .wave.waveTop(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');")
+      .waveWrapperInner.bgMiddle
+        .wave.waveMiddle(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');")
+      .waveWrapperInner.bgBottom
+        .wave.waveBottom(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');")
 
     nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
       .uk-navbar-left
@@ -48,6 +51,7 @@ html
       small Developed by Jonathan Herrera
     .uk-panel
       small Powered by Ui Kit
+
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js')
