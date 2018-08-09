@@ -1,23 +1,16 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: waveWrapper;
+  font-family: "Open Sans", sans-serif;
 }
-a {
-  color: #00b7ff;
+#blueColor {
+  color: #09f;
 }
-
-
-@keyframes move_wave {
-  0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-  }
-  50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-  }
-  100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-  }
+#orangeColor {
+  background-color: #ffb380;
+  color: #fff;
+}
+#footer {
+  height: 140px;
 }
 .waveWrapper {
   overflow: hidden;
@@ -35,7 +28,7 @@ a {
   overflow: hidden;
   height: 100%;
   bottom: -1px;
-  background-image: linear-gradient(to top, #2c3e50 40%, #233140 60%);
+  background-image: linear-gradient(to top, #fff 40%, #fff 60%);
 }
 .bgTop {
   z-index: 15;
@@ -61,20 +54,64 @@ a {
   background-size: 50% 100px;
 }
 .waveAnimation .waveTop {
-animation: move-wave 3s;
- -webkit-animation: move-wave 3s;
- -webkit-animation-delay: 1s;
- animation-delay: 1s;
-}
-.waveMiddle {
-  background-size: 50% 120px;
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .waveAnimation .waveMiddle {
   animation: move_wave 10s linear infinite;
 }
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
 .waveBottom {
   background-size: 50% 100px;
 }
-.waveAnimation .waveBottom {
-  animation: move_wave 15s linear infinite;
+@-moz-keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+@-webkit-keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+@-o-keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
 }

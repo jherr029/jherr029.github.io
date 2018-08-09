@@ -4,30 +4,33 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
   body
-    .waveWrapper.waveAnimation
-      .waveWrapperInner.bgTop
-        .wave.waveTop(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');")
-      .waveWrapperInner.bgMiddle
-        .wave.waveMiddle(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');")
-      .waveWrapperInner.bgBottom
-        .wave.waveBottom(style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');")
+    .container
+      .waveWrapper.waveAnimation
+        .waveWrapperInner.bgTop
+          .wave.waveTop(style="background-image: url('images/colored_waves/wave-top.png');")
+        .waveWrapperInner.bgMiddle
+          .wave.waveMiddle(style="background-image: url('images/colored_waves/wave-mid.png');")
+        .waveWrapperInner.bgBottom
+          .wave.waveBottom(style="background-image: url('images/colored_waves/wave-bot.png');")
 
     nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
       .uk-navbar-left
         ul.uk-navbar-nav
           li.uk-active
-            a(href='#', uk-icon='user')#dominantColor
-              b Jonathan  
+            a(href='#', uk-icon='user')#blueColor
+              .uk-text-capitalize.uk-text-bold Jonathan
       .uk-navbar-right
         ul.uk-navbar-nav
           li
-            a(href='https://github.com/jherr029', uk-icon='github')
+            a(href='https://github.com/jherr029', uk-icon='github')#blueColor
           li
-            a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')
+            a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')#blueColor
 
-    .uk-navbar-container(uk-navbar='').uk-box-shadow-large
+    .uk-navbar-container(uk-navbar='').uk-box-shadow-small
       .uk-navbar-center
         ul.uk-navbar-nav
           li.uk-parent
@@ -36,16 +39,28 @@ html
             a(href='') Projects
           li.uk-parent
             a(href='') About Me
+      
+    .uk-section#orangeColor
+      .uk-container
+        .uk-grid
+          div
+            p test
+          div
+            p test 2
+
 
     .container
       block content
 
-  .uk-padding-small
-  footer.uk-text-center
-    .uk-panel
-      small Developed by Jonathan Herrera
-    .uk-panel
-      small Powered by Ui Kit
+
+      .container
+        footer
+          hr.uk-divider-icon.uk-container
+          #footer.uk-container.uk-text-center.uk-position-bottom
+            .uk-panel
+              #whiteColor.uk-text-meta Developed by Jonathan Herrera
+            .uk-panel
+              #whiteColor.uk-text-meta Powered by Ui Kit
 
 
 
