@@ -8,29 +8,21 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
-    .container
-      .waveWrapper.waveAnimation
-        .waveWrapperInner.bgTop
-          .wave.waveTop(style="background-image: url('images/colored_waves/wave-top.png');")
-        .waveWrapperInner.bgMiddle
-          .wave.waveMiddle(style="background-image: url('images/colored_waves/wave-mid.png');")
-        .waveWrapperInner.bgBottom
-          .wave.waveBottom(style="background-image: url('images/colored_waves/wave-bot.png');")
 
-    nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
+    nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='').uk-margin-medium-left.uk-margin-medium-right
       .uk-navbar-left
         ul.uk-navbar-nav
           li.uk-active
-            a(href='#', uk-icon='user')#blueColor
+            a(href='#', uk-icon='user')#primaryColor
               .uk-text-capitalize.uk-text-bold Jonathan
       .uk-navbar-right
         ul.uk-navbar-nav
           li
-            a(href='https://github.com/jherr029', uk-icon='github')#blueColor
+            a(href='https://github.com/jherr029', uk-icon='github')#primaryColor
           li
-            a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')#blueColor
+            a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')#primaryColor
 
-    .uk-navbar-container(uk-navbar='').uk-box-shadow-small
+    .uk-navbar-container(uk-navbar='').uk-box-shadow-small.uk-margin-left.uk-margin-right
       .uk-navbar-center
         ul.uk-navbar-nav
           li.uk-parent
@@ -40,28 +32,74 @@ html
           li.uk-parent
             a(href='') About Me
       
-    .uk-section#orangeColor
+    section.uk-section
       .uk-container
-        .uk-grid
+        .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
           div
-            p test
+            p.uk-text-bold#primaryColor Welcome to my website !
+            p.uk-text-lead Hi, I am Jonathan Herrera and I am always looking for interesting programming projects to tackle on.
+          div.uk-text-center
+            p.uk-text-bold#primaryColor Hire Me !
+            p.uk-text-lead I am currently looking for employment
+            div
+              a.uk-button.uk-button-default.uk-align-center.uk-width-1-2(href='files/ResumeJH.pdf')#secondaryColor Check out my resume
+        
+      .uk-container
+      .uk-text-center
+        h2#primaryColor Interest
+        .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
           div
-            p test 2
-
+            img(src="images/icons/learn.svg", height="150", width='150')
+            p.uk-text-bold Machine Learning
+          div
+            img(src="images/icons/data.svg", height="150", width='150')
+            p.uk-text-bold Data Visualization
+          div
+            img(src="images/icons/vision.svg", height="150", width='150')
+            p.uk-text-bold Computer Vision
+          div
+            img(src="images/icons/stack.svg", height="150", width='150')
+            p.uk-text-bold Full Stack Development
 
     .container
       block content
+    
+    section.uk-section.uk-section-muted
+      .uk-container
+        header.uk-text-center
+          h2#secondaryColorText Projects
+        h1.uk-text-center The following are projects that have completed or I am currently working on
+        div
+          dl.uk-description-list.uk-description-list-divider
+            dt Shuttle Analytics
+            dd Short description
+
+            dt Twitch Analytics
+            dd Short description
+
+            dt Where's Waldo
+            dd Short description
 
 
-      .container
-        footer
-          hr.uk-divider-icon.uk-container
-          #footer.uk-container.uk-text-center.uk-position-bottom
-            .uk-panel
-              #whiteColor.uk-text-meta Developed by Jonathan Herrera
-            .uk-panel
-              #whiteColor.uk-text-meta Powered by Ui Kit
+        
 
+  footer
+    .container#footer
+        hr.uk-divider-icon.uk-container
+        .uk-container.uk-text-center
+          .uk-panel
+            #whiteColor.uk-text-meta Developed by Jonathan Herrera
+          .uk-panel
+            #whiteColor.uk-text-meta Powered by Ui Kit
+
+    .container
+      .waveWrapper.waveAnimation
+        .waveWrapperInner.bgTop
+          .wave.waveTop(style="background-image: url('images/colored_waves/wave-top.png');")
+        .waveWrapperInner.bgMiddle
+          .wave.waveMiddle(style="background-image: url('images/colored_waves/wave-mid.png');")
+        .waveWrapperInner.bgBottom
+          .wave.waveBottom(style="background-image: url('images/colored_waves/wave-bot.png');")
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js')

@@ -1,17 +1,34 @@
 body
-  padding: 50px
   font-family: "Open Sans", sans-serif
 
 
-#blueColor
+#primaryColor
 	color: #0099ff
+	h2
+		color: #0099ff
 
-#orangeColor
+#secondaryColor
+	background-color: #FF6600
+	color : #ffffff
+
+#secondaryColorText
+	color: #FF6600
+
+#tertiaryColor
 	background-color: #FFB380
 	color: #ffffff
+	h1 
+		color: #ffffff
+	p 
+		color: #ffffff
 
 #footer
-	height: 140px
+	height: 150px
+	padding: 40px
+	bottom 0
+
+#greySection
+	background-color: #EEEEEE
 
 @keyframes move_wave 
   0% 
@@ -23,7 +40,7 @@ body
  
 .waveWrapper 
   overflow hidden
-  position absolute
+  position fixed
   left 0
   right 0
   bottom 0
@@ -32,7 +49,7 @@ body
   z-index -1
 
 .waveWrapperInner 
-	position absolute
+	position fixed
 	width 100%
 	overflow hidden
 	height 100%
@@ -51,7 +68,7 @@ body
 	z-index 5
 
 .wave 
-	position absolute
+	position fixed
 	left 0
 	width 200%
 	height 100%

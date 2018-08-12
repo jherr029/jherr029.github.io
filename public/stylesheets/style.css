@@ -1,20 +1,40 @@
 body {
-  padding: 50px;
   font-family: "Open Sans", sans-serif;
 }
-#blueColor {
+#primaryColor {
   color: #09f;
 }
-#orangeColor {
+#primaryColor h2 {
+  color: #09f;
+}
+#secondaryColor {
+  background-color: #f60;
+  color: #fff;
+}
+#secondaryColorText {
+  color: #f60;
+}
+#tertiaryColor {
   background-color: #ffb380;
   color: #fff;
 }
+#tertiaryColor h1 {
+  color: #fff;
+}
+#tertiaryColor p {
+  color: #fff;
+}
 #footer {
-  height: 140px;
+  height: 150px;
+  padding: 40px;
+  bottom: 0;
+}
+#greySection {
+  background-color: #eee;
 }
 .waveWrapper {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -23,7 +43,7 @@ body {
   z-index: -1;
 }
 .waveWrapperInner {
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
   height: 100%;
@@ -42,7 +62,7 @@ body {
   z-index: 5;
 }
 .wave {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 200%;
   height: 100%;
