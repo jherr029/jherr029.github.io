@@ -7,11 +7,21 @@ body {
 #primaryColor h2 {
   color: #09f;
 }
+#primaryColorBg {
+  background-color: #09f;
+  color: #fff;
+}
 #secondaryColor {
   background-color: #f60;
   color: #fff;
 }
 #secondaryColorText {
+  color: #f60;
+}
+#secondaryColorText h2 {
+  color: #f60;
+}
+#secondaryColorText h3 {
   color: #f60;
 }
 #tertiaryColor {
@@ -24,17 +34,49 @@ body {
 #tertiaryColor p {
   color: #fff;
 }
+#whiteColor {
+  color: #fff;
+}
+#whiteColor h1 {
+  color: #fff;
+}
+#whiteColor h2 {
+  color: #fff;
+}
+#whiteColor h3 {
+  color: #fff;
+}
 #footer {
   height: 150px;
   padding: 40px;
   bottom: 0;
 }
+#maxView {
+  height: 100vh;
+}
 #greySection {
   background-color: #eee;
 }
+#whiteSection {
+  background-color: #fff;
+}
+.block {
+  background: linear-gradient(rgba(0,153,255,0.9), rgba(0,153,255,0.9)), url("../images/tosh.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 85vh;
+}
+.aboutBlock {
+  background: linear-gradient(to bottom right, rgba(255,255,255,0), rgba(0,153,255,0.9));
+}
+#paddingColor {
+  background-color: #f60;
+}
 .waveWrapper {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
@@ -43,7 +85,7 @@ body {
   z-index: -1;
 }
 .waveWrapperInner {
-  position: fixed;
+  position: absolute;
   width: 100%;
   overflow: hidden;
   height: 100%;

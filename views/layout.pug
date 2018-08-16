@@ -9,11 +9,11 @@ html
 
   body
 
-    nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='').uk-margin-medium-left.uk-margin-medium-right
+    nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='').uk-margin-small-left.uk-margin-small-right
       .uk-navbar-left
         ul.uk-navbar-nav
           li.uk-active
-            a(href='#', uk-icon='user')#primaryColor
+            a(href='#aboutMe', uk-icon='user')#primaryColor
               .uk-text-capitalize.uk-text-bold Jonathan
       .uk-navbar-right
         ul.uk-navbar-nav
@@ -22,30 +22,81 @@ html
           li
             a(href='https://www.linkedin.com/in/jonathan-herrera-52b22613b/', uk-icon='linkedin')#primaryColor
 
-    .uk-navbar-container(uk-navbar='').uk-box-shadow-small.uk-margin-left.uk-margin-right
+    .uk-navbar-container(uk-navbar='').uk-box-shadow-small.uk-box-shadow-large
       .uk-navbar-center
         ul.uk-navbar-nav
           li.uk-parent
-            a(href='') Resume
+            a(href='files/ResumeJH.pdf') Resume
           li.uk-parent
-            a(href='') Projects
+            a(href='#projects', uk-scroll) Projects
           li.uk-parent
-            a(href='') About Me
+            a(href='#aboutMe', uk-scroll) About Me
       
-    section.uk-section
-      .uk-container
-        .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
-          div
-            p.uk-text-bold#primaryColor Welcome to my website !
-            p.uk-text-lead Hi, I am Jonathan Herrera and I am always looking for interesting programming projects to tackle on.
-          div.uk-text-center
-            p.uk-text-bold#primaryColor Hire Me !
-            p.uk-text-lead I am currently looking for employment
+    section
+      .block
+        .uk-container
+          .uk-text-center.uk-position-center#whiteColor
             div
-              a.uk-button.uk-button-default.uk-align-center.uk-width-1-2(href='files/ResumeJH.pdf')#secondaryColor Check out my resume
+              u
+                h1.uk-heading-primary Hi I'm Jonathan.
+              h2.uk-margin-left.uk-margin-right Software engineer and a handyman with a green thumb
+          div.uk-text-center.uk-position-bottom#whiteColor
+            h3.uk-padding-remove-bottom.uk-margin-remove-bottom Check me out
+            a(href='#projects', uk-scroll, uk-icon='icon: arrow-down; ratio: 2').uk-margin-bottom
         
+    
+    section.uk-section.uk-section-muted#projects
       .uk-container
-      .uk-text-center
+        header.uk-text-center
+          h1#secondaryColorText Projects
+        h3.uk-text-center.uk-margin-medium-bottom The following are projects that have completed or I am currently working on
+      .uk-container.uk-padding-medium
+        dl.uk-description-list.uk-description-list-divider
+          dt Where's Waldo ( in development )
+          dd A computer vision program that will look for Waldo
+
+          dt Shuttle ( On hold )
+          dd A web app in which user's can request their ride destination for UCR's shuttle program. The app will determine the most optimal route from all requested routes using A* search alogirhtm.
+          
+          dt Twitch Analytics ( On hold )
+          dd A web app to determine if there is correalation between a Twitch streamer viewership and popular clips of the streamer posted on Reddit. The correlation will be determined using linear regression. A sentiment dictionary will be used to determine if the clip invoked a positive or negative reaction.
+
+          dt Graphing Calculator for Android
+          dd A graphing calculator based on Desmos calculator
+
+          dt Synthesizer
+          dd A embedded system using an atmega1284, raspberry pi and the Arduino Uno.
+            a(href='https://www.youtube.com/watch?v=aegn7HOzvMA')  Video of the Synthesizer.
+
+          dt Dodging Game
+          dd A embedded system using an atmega1284 in which the player has to dodge obstacles through various levels
+            a(href='https://www.youtube.com/watch?v=TZeS5Vxri7U')  Video of the Dodging Game.
+
+      .uk-container.uk-text-center.uk-padding-large#secondaryColorText
+        h3 For more projects checkout my github
+        a(href='https://github.com/jherr029', uk-icon='icon: github; ratio: 4')
+
+      hr.uk-divider-icon
+        
+    
+    #aboutMe
+    section.uk-section.uk-section-small.uk-background-muted
+      .uk-container
+        .uk-column-1-2
+          .uk-container.uk-margin-top
+            .uk-text-center
+              .uk-text-lead About Me
+            p.
+             I graduated from Univerisity of California Riverside with a Bachelor of Science in Computer Science.
+             Ever since I was a kid, I was always fascinated by robots in cartoons. I wanted to build one of my own, so I decided
+             really early on I wanted to become an engineer. As I got older, I realized I was instead fascinated by the conscious
+             of the robot rather than the hardware. That is how I ended in picking up programming. My hobbies include gardening, tinkering
+             and making sure my husky is not causing trouble around the house.
+            
+          img(src='images/icons/robot.svg')
+
+    section.uk-section.uk-background-muted.uk-padding-remove-top.uk-padding-remove-bottom
+      .uk-container.uk-padding.uk-text-center
         h2#primaryColor Interest
         .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
           div
@@ -61,45 +112,32 @@ html
             img(src="images/icons/stack.svg", height="150", width='150')
             p.uk-text-bold Full Stack Development
 
+        p.uk-text-bold#primaryColor Hire Me !
+        p.uk-text-lead I am currently looking for employment
+        div
+          a.uk-button.uk-button-default.uk-align-center.uk-width-1-3(href='files/ResumeJH.pdf')#secondaryColor Check out my resume
+
     .container
       block content
-    
-    section.uk-section.uk-section-muted
-      .uk-container
-        header.uk-text-center
-          h2#secondaryColorText Projects
-        h1.uk-text-center The following are projects that have completed or I am currently working on
-        div
-          dl.uk-description-list.uk-description-list-divider
-            dt Shuttle Analytics
-            dd Short description
-
-            dt Twitch Analytics
-            dd Short description
-
-            dt Where's Waldo
-            dd Short description
-
-
         
 
-  footer
-    .container#footer
+  footer.uk-background-muted
+    .container.uk-padding-remove-top.uk-margin-bottom
         hr.uk-divider-icon.uk-container
         .uk-container.uk-text-center
           .uk-panel
-            #whiteColor.uk-text-meta Developed by Jonathan Herrera
+            .uk-text-meta Developed by Jonathan Herrera
           .uk-panel
-            #whiteColor.uk-text-meta Powered by Ui Kit
+            .uk-text-meta Powered by Ui Kit
 
-    .container
-      .waveWrapper.waveAnimation
-        .waveWrapperInner.bgTop
-          .wave.waveTop(style="background-image: url('images/colored_waves/wave-top.png');")
-        .waveWrapperInner.bgMiddle
-          .wave.waveMiddle(style="background-image: url('images/colored_waves/wave-mid.png');")
-        .waveWrapperInner.bgBottom
-          .wave.waveBottom(style="background-image: url('images/colored_waves/wave-bot.png');")
+    //- .container
+    //-   .waveWrapper.waveAnimation
+    //-     .waveWrapperInner.bgTop
+    //-       .wave.waveTop(style="background-image: url('images/colored_waves/wave-top.png');")
+    //-     .waveWrapperInner.bgMiddle
+    //-       .wave.waveMiddle(style="background-image: url('images/colored_waves/wave-mid.png');")
+    //-     .waveWrapperInner.bgBottom
+    //-       .wave.waveBottom(style="background-image: url('images/colored_waves/wave-bot.png');")
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js')
